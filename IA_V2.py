@@ -31,8 +31,8 @@ tracksCols = [
 artistsCols = ["followers", "genres", "name", "popularity"]
 
 
-tracks = pd.read_csv("tracks.csv", usecols=tracksCols)
-artists = pd.read_csv("artists.csv")
+tracks = pd.read_csv("data/tracks.csv", usecols=tracksCols)
+artists = pd.read_csv("data/artists.csv")
 
 
 tracks["artists"] = tracks["artists"].str.strip("[]")
@@ -59,7 +59,7 @@ xCols = [
         'mode', 'speechiness', 'acousticness', 'instrumentalness', 'liveness',
         'valence', 'tempo', 'time_signature', 'musicPopularity',
         'artistPopularity', 'artistFollowers'
-       ]
+        ]
 
 x = tracks[xCols].values
 min_max_scaler = preprocessing.MinMaxScaler()

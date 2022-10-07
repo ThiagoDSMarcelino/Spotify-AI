@@ -19,7 +19,7 @@ cols = [
         "loudness", "mode", "popularity", "speechiness", "tempo"
         ]
 
-df = pd.read_csv("data.csv", usecols=cols)
+df = pd.read_csv("data/data.csv", usecols=cols)
 
 
 df["artists"] = df["artists"].str.strip("[]")
